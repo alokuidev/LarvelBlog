@@ -14,7 +14,9 @@ Route::get('/welcome', function () {
 //Route::view('/admin','admin.login');
 
 Route::get('about/{name?}',function($name = null){
-    return view('about', ['name' => $name]);     
+    $users = ['A','B','C','D','E'];
+    $name = 'Alok Singh';
+    return view('about', ['name' => $name, 'users'=> $users]);     
 });
 
 Route::redirect('/abc','/');
