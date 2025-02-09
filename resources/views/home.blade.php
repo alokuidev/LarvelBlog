@@ -1,5 +1,5 @@
 @include('common.header')
-<x-message-banner/>
+<x-message-banner msg="Redeirected to Home Page Successfully" class="success-message"/>
 <h1>Home Page</h1>
 @include('common.inner')
 <a href="/welcome">Welcome Page</a>
