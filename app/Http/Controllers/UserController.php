@@ -19,7 +19,9 @@ class UserController extends Controller
     function userHome(){
         return view('home');
     }
-
+    function aboutFolder(){
+        return view('about.about');
+    }
     function userAbout(){
         return view('about');
     }

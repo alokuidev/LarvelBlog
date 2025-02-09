@@ -27,3 +27,4 @@ Route::get('/user',[UserController::class,'getUser']);
 Route::get('user-home',[UserController::class,'userHome']);
 Route::get('user-about',[UserController::class,'userAbout']);
 Route::get('admin',[UserController::class,'adminLogin']);
+Route::get('aboutFolder',[UserController::class,'aboutFolder']);
