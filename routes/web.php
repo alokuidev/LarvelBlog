@@ -20,6 +20,7 @@ Route::get('about/{name?}',function($name = null){
 });
 
 Route::redirect('/abc','/');
+Route::view('user-form','user-form');
 
 Route::get('/user',[UserController::class,'getUser']);
 //Route::get('/welcome/{number}',[UserController::class,'getUserName']);
