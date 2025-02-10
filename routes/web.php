@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\UserForm;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -20,7 +20,7 @@ Route::get('about/{name?}',function($name = null){
 });
 
 Route::redirect('/abc','/');
-Route::view('user-form','user-form');
+
 
 Route::get('/user',[UserController::class,'getUser']);
 //Route::get('/welcome/{number}',[UserController::class,'getUserName']);
@@ -29,3 +29,7 @@ Route::get('user-home',[UserController::class,'userHome']);
 Route::get('user-about',[UserController::class,'userAbout']);
 Route::get('admin',[UserController::class,'adminLogin']);
 Route::get('aboutFolder',[UserController::class,'aboutFolder']);
+
+
+Route::view('user-form','user-form');
+Route::post('submitUserForm', [UserForm::class, 'addUser']);
